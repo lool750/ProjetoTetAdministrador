@@ -1,0 +1,254 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\gerenciarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\gerenciarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\gerenciarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\gerenciarperfil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\dal\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\dal\\sessaousuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\bemvindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\bemvindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\bemvindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\bemvindo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\apresentacao\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\apresentacao\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\novoprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\novoprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\novoprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\novoprojeto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\apresentacao\\cadastrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\cadastrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|c:\\users\\carlo\\onedrive\\\u00E1rea de trabalho\\arquivos visulastudio\\projetotetv3\\sqltetv3\\sqltetatualizado2025\\sqltet\\projetotetmelhorado\\projetotetmelhorado\\apresentacao\\cadastrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\apresentacao\\cadastrese.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\modelo\\controle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\modelo\\controle.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\dal\\logindaocomandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\dal\\logindaocomandos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetotetmelhorado\\dal\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{58FFF4C3-BD46-4803-804E-4933790B2915}|projetoTetMelhorado\\projetoTetMelhorado.csproj|solutionrelative:projetotetmelhorado\\dal\\conexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BemVindo.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAwwIMAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:47:08.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BemVindo.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\BemVindo.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\BemVindo.cs [Design]",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\BemVindo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:47:06.617Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SessaoUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\SessaoUsuario.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\DAL\\SessaoUsuario.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\SessaoUsuario.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\DAL\\SessaoUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:39:57.823Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GerenciarPerfil.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAA9wCgAAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:37:10.119Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GerenciarPerfil.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs [Design]",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\GerenciarPerfil.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:35:23.493Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "NovoProjeto.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAkwE4AAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:33:41.813Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\Form1.cs [Design]",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.053Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\Form1.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAFsAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.053Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDaoComandos.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\LoginDaoComandos.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\DAL\\LoginDaoComandos.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\LoginDaoComandos.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\DAL\\LoginDaoComandos.cs",
+              "ViewState": "AgIAAEIAAAAAAAAAAADwv2gAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.297Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "NovoProjeto.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs [Design]",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\NovoProjeto.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-13T00:32:42.675Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CadastreSe.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "ViewState": "AgIAAEYAAAAAAAAAAADwv10AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.032Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Controle.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Modelo\\Controle.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Modelo\\Controle.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Modelo\\Controle.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\Modelo\\Controle.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAuwB4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "CadastreSe.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\Apresentacao\\CadastreSe.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\Apresentacao\\CadastreSe.cs [Design]",
+              "RelativeToolTip": "projetoTetMelhorado\\Apresentacao\\CadastreSe.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.053Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Conexao.cs",
+              "DocumentMoniker": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\Conexao.cs",
+              "RelativeDocumentMoniker": "projetoTetMelhorado\\DAL\\Conexao.cs",
+              "ToolTip": "C:\\Users\\carlo\\OneDrive\\\u00C1rea de Trabalho\\arquivos visulastudio\\projetoTetV3\\sqlTetV3\\sqlTetAtualizado2025\\sqltet\\projetoTetMelhorado\\projetoTetMelhorado\\DAL\\Conexao.cs",
+              "RelativeToolTip": "projetoTetMelhorado\\DAL\\Conexao.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAmwB8AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T18:06:00.163Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
