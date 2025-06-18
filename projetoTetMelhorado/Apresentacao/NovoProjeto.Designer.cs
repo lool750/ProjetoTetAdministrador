@@ -36,6 +36,9 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnCriar = new System.Windows.Forms.Button();
             this.btnCancelarNP = new System.Windows.Forms.Button();
+            this.txbQtdPessoas = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txbNovoProjeto
@@ -59,7 +62,7 @@
             // txbValor
             // 
             this.txbValor.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbValor.Location = new System.Drawing.Point(96, 187);
+            this.txbValor.Location = new System.Drawing.Point(96, 265);
             this.txbValor.Name = "txbValor";
             this.txbValor.Size = new System.Drawing.Size(342, 29);
             this.txbValor.TabIndex = 2;
@@ -71,9 +74,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
             this.label1.Location = new System.Drawing.Point(170, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 25);
+            this.label1.Size = new System.Drawing.Size(18, 25);
             this.label1.TabIndex = 3;
-            this.label1.Text = " Nome do projeto";
+            this.label1.Text = " ";
             // 
             // label2
             // 
@@ -81,24 +84,24 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(199, 99);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(114, 25);
+            this.label2.Size = new System.Drawing.Size(120, 25);
             this.label2.TabIndex = 4;
-            this.label2.Text = " Descrição";
+            this.label2.Text = " Descrição:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(226, 159);
+            this.label3.Location = new System.Drawing.Point(220, 228);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(68, 25);
+            this.label3.Size = new System.Drawing.Size(74, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = " Valor";
+            this.label3.Text = " Valor:";
             // 
             // btnCriar
             // 
             this.btnCriar.Font = new System.Drawing.Font("Microsoft Sans Serif", 22F);
-            this.btnCriar.Location = new System.Drawing.Point(165, 247);
+            this.btnCriar.Location = new System.Drawing.Point(165, 343);
             this.btnCriar.Name = "btnCriar";
             this.btnCriar.Size = new System.Drawing.Size(170, 50);
             this.btnCriar.TabIndex = 6;
@@ -108,7 +111,7 @@
             // 
             // btnCancelarNP
             // 
-            this.btnCancelarNP.Location = new System.Drawing.Point(208, 321);
+            this.btnCancelarNP.Location = new System.Drawing.Point(208, 417);
             this.btnCancelarNP.Margin = new System.Windows.Forms.Padding(2);
             this.btnCancelarNP.Name = "btnCancelarNP";
             this.btnCancelarNP.Size = new System.Drawing.Size(99, 32);
@@ -117,11 +120,43 @@
             this.btnCancelarNP.UseVisualStyleBackColor = true;
             this.btnCancelarNP.Click += new System.EventHandler(this.btnCancelarNP_Click);
             // 
+            // txbQtdPessoas
+            // 
+            this.txbQtdPessoas.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txbQtdPessoas.Location = new System.Drawing.Point(96, 196);
+            this.txbQtdPessoas.Name = "txbQtdPessoas";
+            this.txbQtdPessoas.Size = new System.Drawing.Size(342, 29);
+            this.txbQtdPessoas.TabIndex = 9;
+            this.txbQtdPessoas.TextChanged += new System.EventHandler(this.txbQtdPessoas_TextChanged);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label4.Location = new System.Drawing.Point(108, 159);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(336, 25);
+            this.label4.TabIndex = 10;
+            this.label4.Text = "Quantidade de pessoa na equipe:";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F);
+            this.label5.Location = new System.Drawing.Point(184, 28);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(176, 25);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Nome do projeto:";
+            // 
             // NovoProjeto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 364);
+            this.ClientSize = new System.Drawing.Size(560, 517);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.txbQtdPessoas);
             this.Controls.Add(this.btnCancelarNP);
             this.Controls.Add(this.btnCriar);
             this.Controls.Add(this.label3);
@@ -148,5 +183,8 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button btnCriar;
         private System.Windows.Forms.Button btnCancelarNP;
+        private System.Windows.Forms.TextBox txbQtdPessoas;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
     }
 }

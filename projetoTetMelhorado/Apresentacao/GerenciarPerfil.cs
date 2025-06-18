@@ -111,5 +111,13 @@ namespace projetoTetMelhorado.Apresentacao
             }
         }
 
+        private void btnEditarPerfil_Click(object sender, EventArgs e)
+        {
+            EditarPerfil editarPerfil = new EditarPerfil();
+            editarPerfil.Show();  // Abre a tela EditarPerfil
+            this.Close();         // Fecha a tela GerenciarPerfil (opcional: pode usar Hide() se quiser manter aberta)
+        }
+
+        //fim botão editar perfil
     }
 }

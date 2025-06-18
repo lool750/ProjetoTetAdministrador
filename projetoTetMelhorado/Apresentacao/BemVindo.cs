@@ -82,11 +82,11 @@ namespace projetoTetMelhorado.Apresentacao
                 using (MySqlConnection con = new Conexao().conectar())
                 {
                     string query = $@"
-                SELECT p.nome_projeto, p.descricao, p.valor, p.data_criacao,
-                       u.nome AS nome_autor, u.foto_perfil, u.email AS email_autor, u.telefone
-                FROM projetos p
-                INNER JOIN logins u ON p.email_autor = u.email
-                ORDER BY p.data_criacao {ordem}";
+            SELECT p.nome_projeto, p.descricao, p.valor, p.data_criacao, p.qtd_pessoas,
+                   u.nome AS nome_autor, u.foto_perfil, u.email AS email_autor, u.telefone
+            FROM projetos p
+            INNER JOIN logins u ON p.email_autor = u.email
+            ORDER BY p.data_criacao {ordem}";
 
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
@@ -97,12 +97,13 @@ namespace projetoTetMelhorado.Apresentacao
                         string descricao = reader["descricao"].ToString();
                         decimal valor = Convert.ToDecimal(reader["valor"]);
                         DateTime data = Convert.ToDateTime(reader["data_criacao"]);
+                        int qtdPessoas = Convert.ToInt32(reader["qtd_pessoas"]);
                         string nomeAutor = reader["nome_autor"].ToString();
                         byte[] fotoAutor = reader["foto_perfil"] != DBNull.Value ? (byte[])reader["foto_perfil"] : null;
                         string emailAutor = reader["email_autor"].ToString();
                         string telefoneAutor = reader["telefone"].ToString();
 
-                        AdicionarProjetoAoFeed(nome, descricao, valor, data, nomeAutor, fotoAutor, emailAutor, telefoneAutor);
+                        AdicionarProjetoAoFeed(nome, descricao, valor, data, nomeAutor, fotoAutor, emailAutor, telefoneAutor, qtdPessoas);
                     }
                 }
             }
@@ -117,11 +118,11 @@ namespace projetoTetMelhorado.Apresentacao
 
         // Cria dinamicamente um painel com os dados do projeto
         private void AdicionarProjetoAoFeed(string nome, string descricao, decimal valor, DateTime data,
-    string nomeAutor, byte[] fotoAutor, string emailAutor, string telefoneAutor)
+    string nomeAutor, byte[] fotoAutor, string emailAutor, string telefoneAutor, int qtdPessoas)
         {
             Panel projetoPanel = new Panel();
             projetoPanel.Width = flowLayoutPanelProjetos.Width - 30;
-            projetoPanel.Height = 160;
+            projetoPanel.Height = 180; // altura aumentada para caber a nova informação
             projetoPanel.BorderStyle = BorderStyle.FixedSingle;
             projetoPanel.Margin = new Padding(10);
 
@@ -140,7 +141,7 @@ namespace projetoTetMelhorado.Apresentacao
             }
             else
             {
-                picAutor.BackColor = Color.Gray; // Placeholder
+                picAutor.BackColor = Color.Gray;
             }
 
             // Nome do autor
@@ -171,10 +172,16 @@ namespace projetoTetMelhorado.Apresentacao
             lblValor.Location = new Point(10, 140);
             lblValor.AutoSize = true;
 
+            // Quantidade de pessoas
+            Label lblQtdPessoas = new Label();
+            lblQtdPessoas.Text = "Equipe: " + qtdPessoas + " pessoa(s)";
+            lblQtdPessoas.Location = new Point(120, 140);
+            lblQtdPessoas.AutoSize = true;
+
             // Data
             Label lblData = new Label();
             lblData.Text = "Criado em: " + data.ToString("dd/MM/yyyy HH:mm");
-            lblData.Location = new Point(200, 140);
+            lblData.Location = new Point(250, 140);
             lblData.AutoSize = true;
 
             // Botão de contato
@@ -194,11 +201,13 @@ namespace projetoTetMelhorado.Apresentacao
             projetoPanel.Controls.Add(lblNome);
             projetoPanel.Controls.Add(lblDescricao);
             projetoPanel.Controls.Add(lblValor);
+            projetoPanel.Controls.Add(lblQtdPessoas);
             projetoPanel.Controls.Add(lblData);
             projetoPanel.Controls.Add(btnContato);
 
             flowLayoutPanelProjetos.Controls.Add(projetoPanel);
         }
+
 
 
 

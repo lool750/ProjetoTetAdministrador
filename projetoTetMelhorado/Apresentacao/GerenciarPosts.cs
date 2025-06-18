@@ -28,7 +28,8 @@ namespace projetoTetMelhorado.Apresentacao
             {
                 using (MySqlConnection con = new Conexao().conectar())
                 {
-                    string query = "SELECT id, nome_projeto, descricao, valor, data_criacao FROM projetos WHERE email_autor = @Email";
+                    // Incluindo qtd_pessoas na query
+                    string query = "SELECT id, nome_projeto, descricao, valor, data_criacao, qtd_pessoas FROM projetos WHERE email_autor = @Email";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Email", SessaoUsuario.EmailLogado);
 
@@ -40,8 +41,9 @@ namespace projetoTetMelhorado.Apresentacao
                         string descricao = reader["descricao"].ToString();
                         decimal valor = Convert.ToDecimal(reader["valor"]);
                         DateTime data = Convert.ToDateTime(reader["data_criacao"]);
+                        int qtdPessoas = Convert.ToInt32(reader["qtd_pessoas"]);
 
-                        AdicionarPostAoPainel(id, nome, descricao, valor, data);
+                        AdicionarPostAoPainel(id, nome, descricao, valor, data, qtdPessoas);
                     }
                 }
             }
@@ -51,12 +53,13 @@ namespace projetoTetMelhorado.Apresentacao
             }
         }
 
-        private void AdicionarPostAoPainel(int id, string nome, string descricao, decimal valor, DateTime data)
+        // Atualizei assinatura para receber qtdPessoas
+        private void AdicionarPostAoPainel(int id, string nome, string descricao, decimal valor, DateTime data, int qtdPessoas)
         {
             Panel panel = new Panel
             {
                 Width = flowLayoutPanelPosts.Width - 30,
-                Height = 130,
+                Height = 150,
                 BorderStyle = BorderStyle.FixedSingle,
                 Margin = new Padding(10)
             };
@@ -66,18 +69,27 @@ namespace projetoTetMelhorado.Apresentacao
             Label lblValor = new Label { Text = "Valor: R$ " + valor.ToString("N2"), Location = new Point(10, 80), AutoSize = true };
             Label lblData = new Label { Text = "Criado em: " + data.ToString("dd/MM/yyyy HH:mm"), Location = new Point(200, 80), AutoSize = true };
 
+            // Novo label para qtd pessoas
+            Label lblQtdPessoas = new Label
+            {
+                Text = "Equipe: " + qtdPessoas.ToString() + " pessoa(s)",
+                Location = new Point(10, 110),
+                AutoSize = true
+            };
+
             Button btnEditar = new Button
             {
                 Text = "Editar",
-                Location = new Point(panel.Width - 190, 90),
+                Location = new Point(panel.Width - 190, 100),
                 Size = new Size(80, 30)
             };
-            btnEditar.Click += (s, e) => EditarPost(id, nome, descricao, valor);
+            // Passando qtdPessoas no clique do botão editar
+            btnEditar.Click += (s, e) => EditarPost(id, nome, descricao, valor, qtdPessoas);
 
             Button btnExcluir = new Button
             {
                 Text = "Excluir",
-                Location = new Point(panel.Width - 100, 90),
+                Location = new Point(panel.Width - 100, 100),
                 Size = new Size(80, 30)
             };
             btnExcluir.Click += (s, e) => ExcluirPost(id);
@@ -86,15 +98,17 @@ namespace projetoTetMelhorado.Apresentacao
             panel.Controls.Add(lblDescricao);
             panel.Controls.Add(lblValor);
             panel.Controls.Add(lblData);
+            panel.Controls.Add(lblQtdPessoas);
             panel.Controls.Add(btnEditar);
             panel.Controls.Add(btnExcluir);
 
             flowLayoutPanelPosts.Controls.Add(panel);
         }
 
-        private void EditarPost(int id, string nome, string descricao, decimal valor)
+        // Alterei assinatura para receber qtdPessoas e passar ao form
+        private void EditarPost(int id, string nome, string descricao, decimal valor, int qtdPessoas)
         {
-            EditarPost formEditar = new EditarPost(id, nome, descricao, valor);
+            EditarPost formEditar = new EditarPost(id, nome, descricao, valor, qtdPessoas);
             formEditar.FormClosed += (s, e) => CarregarMeusPosts();
             formEditar.ShowDialog();
         }

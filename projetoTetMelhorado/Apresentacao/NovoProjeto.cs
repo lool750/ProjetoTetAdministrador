@@ -48,8 +48,9 @@ namespace projetoTetMelhorado.Apresentacao
             string nome = txbNovoProjeto.Text.Trim();
             string descricao = txbDescricao.Text.Trim();
             string valorTexto = txbValor.Text.Trim();
+            string qtdTexto = txbQtdPessoas.Text.Trim();
 
-            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(descricao) || string.IsNullOrEmpty(valorTexto))
+            if (string.IsNullOrEmpty(nome) || string.IsNullOrEmpty(descricao) || string.IsNullOrEmpty(valorTexto) || string.IsNullOrEmpty(qtdTexto))
             {
                 MessageBox.Show("Preencha todos os campos!", "Atenção", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
@@ -61,23 +62,31 @@ namespace projetoTetMelhorado.Apresentacao
                 return;
             }
 
+            if (!int.TryParse(qtdTexto, out int qtdPessoas) || qtdPessoas < 1)
+            {
+                MessageBox.Show("Quantidade de pessoas inválida!", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
             try
             {
                 using (MySql.Data.MySqlClient.MySqlConnection con = new DAL.Conexao().conectar())
                 {
-                    string query = "INSERT INTO projetos (nome_projeto, descricao, valor, data_criacao, email_autor) VALUES (@nome, @descricao, @valor, @data, @autor)";
+                    string query = "INSERT INTO projetos (nome_projeto, descricao, valor, data_criacao, email_autor, qtd_pessoas) " +
+                                   "VALUES (@nome, @descricao, @valor, @data, @autor, @qtd)";
                     MySql.Data.MySqlClient.MySqlCommand cmd = new MySql.Data.MySqlClient.MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@nome", nome);
                     cmd.Parameters.AddWithValue("@descricao", descricao);
                     cmd.Parameters.AddWithValue("@valor", valor);
                     cmd.Parameters.AddWithValue("@data", DateTime.Now);
-                    cmd.Parameters.AddWithValue("@autor", DAL.SessaoUsuario.EmailLogado); // pega o email do usuário logado
+                    cmd.Parameters.AddWithValue("@autor", DAL.SessaoUsuario.EmailLogado);
+                    cmd.Parameters.AddWithValue("@qtd", qtdPessoas);
 
                     cmd.ExecuteNonQuery();
                 }
 
                 MessageBox.Show("Projeto criado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.Close(); // fecha o form depois de criar
+                this.Close();
             }
             catch (Exception ex)
             {
@@ -95,7 +104,18 @@ namespace projetoTetMelhorado.Apresentacao
 
         }
 
+        private void txbQtdPessoas_TextChanged(object sender, EventArgs e)
+        {
+            // Permite apenas números
+            string somenteNumeros = new string(txbQtdPessoas.Text.Where(char.IsDigit).ToArray());
 
-        
+            if (txbQtdPessoas.Text != somenteNumeros)
+            {
+                int pos = txbQtdPessoas.SelectionStart - 1;
+                txbQtdPessoas.Text = somenteNumeros;
+                txbQtdPessoas.SelectionStart = Math.Max(pos, 0);
+            }
+        }
+        //fim text box quantidade de pessoas
     }
 }

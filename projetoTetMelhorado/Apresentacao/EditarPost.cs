@@ -10,12 +10,13 @@ namespace projetoTetMelhorado.Apresentacao
     {
         private int projetoId;
 
-        public EditarPost(int id, string nome, string descricao, decimal valor) : this()
+        public EditarPost(int id, string nome, string descricao, decimal valor, int qtdPessoas) : this()
         {
             projetoId = id;
             txtNome.Text = nome;
             txtDescricao.Text = descricao;
             txtValor.Text = valor.ToString("N2");
+            txtQtdPessoas.Text = qtdPessoas.ToString();
         }
 
         public EditarPost()
@@ -35,17 +36,19 @@ namespace projetoTetMelhorado.Apresentacao
                 string novoNome = txtNome.Text.Trim();
                 string novaDescricao = txtDescricao.Text.Trim();
                 decimal novoValor = decimal.Parse(txtValor.Text);
+                int novaQtdPessoas = int.Parse(txtQtdPessoas.Text.Trim());
 
                 using (MySqlConnection con = new Conexao().conectar())
                 {
                     string updateQuery = @"UPDATE projetos 
-                                           SET nome_projeto = @Nome, descricao = @Descricao, valor = @Valor 
-                                           WHERE id = @Id";
+                                   SET nome_projeto = @Nome, descricao = @Descricao, valor = @Valor, qtd_pessoas = @Qtd 
+                                   WHERE id = @Id";
 
                     MySqlCommand cmd = new MySqlCommand(updateQuery, con);
                     cmd.Parameters.AddWithValue("@Nome", novoNome);
                     cmd.Parameters.AddWithValue("@Descricao", novaDescricao);
                     cmd.Parameters.AddWithValue("@Valor", novoValor);
+                    cmd.Parameters.AddWithValue("@Qtd", novaQtdPessoas);
                     cmd.Parameters.AddWithValue("@Id", projetoId);
 
                     cmd.ExecuteNonQuery();
@@ -59,6 +62,7 @@ namespace projetoTetMelhorado.Apresentacao
                 MessageBox.Show("Erro ao atualizar projeto: " + ex.Message);
             }
         }
+
 
         private void btnVoltar_Click(object sender, EventArgs e)
         {
@@ -83,6 +87,17 @@ namespace projetoTetMelhorado.Apresentacao
                 txtBox.Text = filtrado;
                 // Ajusta a posição do cursor para evitar salto
                 txtBox.SelectionStart = Math.Max(pos, 0);
+            }
+        }
+
+        private void txtQtdPessoas_TextChanged(object sender, EventArgs e)
+        {
+            string numeros = new string(txtQtdPessoas.Text.Where(char.IsDigit).ToArray());
+            if (txtQtdPessoas.Text != numeros)
+            {
+                int pos = txtQtdPessoas.SelectionStart - 1;
+                txtQtdPessoas.Text = numeros;
+                txtQtdPessoas.SelectionStart = Math.Max(pos, 0);
             }
         }
     }

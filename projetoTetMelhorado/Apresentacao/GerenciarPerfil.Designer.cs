@@ -25,6 +25,7 @@
             this.lblSenha = new System.Windows.Forms.Label();
             this.btnMIP = new System.Windows.Forms.Button();
             this.pictureBoxPerfil = new System.Windows.Forms.PictureBox();
+            this.btnEditarPerfil = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPerfil)).BeginInit();
             this.SuspendLayout();
             // 
@@ -105,11 +106,22 @@
             this.pictureBoxPerfil.TabStop = false;
             this.pictureBoxPerfil.Click += new System.EventHandler(this.pictureBoxPerfil_Click);
             // 
+            // btnEditarPerfil
+            // 
+            this.btnEditarPerfil.Location = new System.Drawing.Point(259, 35);
+            this.btnEditarPerfil.Name = "btnEditarPerfil";
+            this.btnEditarPerfil.Size = new System.Drawing.Size(90, 23);
+            this.btnEditarPerfil.TabIndex = 8;
+            this.btnEditarPerfil.Text = "Editar Perfil";
+            this.btnEditarPerfil.UseVisualStyleBackColor = true;
+            this.btnEditarPerfil.Click += new System.EventHandler(this.btnEditarPerfil_Click);
+            // 
             // GerenciarPerfil
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(407, 251);
+            this.Controls.Add(this.btnEditarPerfil);
             this.Controls.Add(this.pictureBoxPerfil);
             this.Controls.Add(this.btnMIP);
             this.Controls.Add(this.lblSenha);
@@ -133,5 +145,6 @@
         private System.Windows.Forms.Label lblSenha;
         private System.Windows.Forms.Button btnMIP;
         private System.Windows.Forms.PictureBox pictureBoxPerfil;
+        private System.Windows.Forms.Button btnEditarPerfil;
     }
 }

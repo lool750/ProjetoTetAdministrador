@@ -36,27 +36,29 @@
             this.btnSalvar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txtQtdPessoas = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // txtNome
             // 
             this.txtNome.Location = new System.Drawing.Point(85, 93);
             this.txtNome.Name = "txtNome";
-            this.txtNome.Size = new System.Drawing.Size(100, 20);
+            this.txtNome.Size = new System.Drawing.Size(153, 20);
             this.txtNome.TabIndex = 0;
             // 
             // txtDescricao
             // 
             this.txtDescricao.Location = new System.Drawing.Point(85, 153);
             this.txtDescricao.Name = "txtDescricao";
-            this.txtDescricao.Size = new System.Drawing.Size(100, 20);
+            this.txtDescricao.Size = new System.Drawing.Size(153, 20);
             this.txtDescricao.TabIndex = 1;
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(85, 212);
+            this.txtValor.Location = new System.Drawing.Point(85, 259);
             this.txtValor.Name = "txtValor";
-            this.txtValor.Size = new System.Drawing.Size(100, 20);
+            this.txtValor.Size = new System.Drawing.Size(153, 20);
             this.txtValor.TabIndex = 2;
             this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             // 
@@ -72,7 +74,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(82, 187);
+            this.label3.Location = new System.Drawing.Point(82, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 5;
@@ -80,7 +82,7 @@
             // 
             // btnSalvar
             // 
-            this.btnSalvar.Location = new System.Drawing.Point(85, 264);
+            this.btnSalvar.Location = new System.Drawing.Point(85, 311);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(75, 23);
             this.btnSalvar.TabIndex = 6;
@@ -99,7 +101,7 @@
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(224, 264);
+            this.btnVoltar.Location = new System.Drawing.Point(224, 311);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(75, 23);
             this.btnVoltar.TabIndex = 8;
@@ -107,11 +109,30 @@
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(89, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(149, 13);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "QUANTIDADE DE PESSOAS";
+            // 
+            // txtQtdPessoas
+            // 
+            this.txtQtdPessoas.Location = new System.Drawing.Point(85, 201);
+            this.txtQtdPessoas.Name = "txtQtdPessoas";
+            this.txtQtdPessoas.Size = new System.Drawing.Size(153, 20);
+            this.txtQtdPessoas.TabIndex = 10;
+            this.txtQtdPessoas.TextChanged += new System.EventHandler(this.txtQtdPessoas_TextChanged);
+            // 
             // EditarPost
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtQtdPessoas);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnSalvar);
@@ -138,5 +159,7 @@
         private System.Windows.Forms.Button btnSalvar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtQtdPessoas;
     }
 }
