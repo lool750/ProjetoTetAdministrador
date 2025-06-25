@@ -128,23 +128,29 @@
     <Compile Include="Apresentacao\EditarPost.Designer.cs">
       <DependentUpon>EditarPost.cs</DependentUpon>
     </Compile>
+    <Compile Include="Apresentacao\EditarPostAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\EditarPostAdm.Designer.cs">
+      <DependentUpon>EditarPostAdm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Apresentacao\GerenciarPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\GerenciarPerfil.Designer.cs">
       <DependentUpon>GerenciarPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Apresentacao\GerenciarPosts.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Apresentacao\GerenciarPosts.Designer.cs">
-      <DependentUpon>GerenciarPosts.cs</DependentUpon>
-    </Compile>
     <Compile Include="Apresentacao\NovoProjeto.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Apresentacao\NovoProjeto.Designer.cs">
       <DependentUpon>NovoProjeto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Apresentacao\PostsDoUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Apresentacao\PostsDoUsuario.Designer.cs">
+      <DependentUpon>PostsDoUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="DAL\Conexao.cs" />
     <Compile Include="DAL\LoginDaoComandos.cs" />
@@ -173,17 +179,20 @@
     <EmbeddedResource Include="Apresentacao\EditarPost.resx">
       <DependentUpon>EditarPost.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\EditarPostAdm.resx">
+      <DependentUpon>EditarPostAdm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\GerenciarPerfil.resx">
       <DependentUpon>GerenciarPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Apresentacao\GerenciarPosts.resx">
-      <DependentUpon>GerenciarPosts.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Apresentacao\NovoProjeto.resx">
       <DependentUpon>NovoProjeto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Apresentacao\PostsDoUsuario.resx">
+      <DependentUpon>PostsDoUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -193,6 +202,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -208,6 +218,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\avatar_padrao.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

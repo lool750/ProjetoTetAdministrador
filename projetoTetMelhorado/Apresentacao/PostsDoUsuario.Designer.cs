@@ -1,6 +1,6 @@
 ﻿namespace projetoTetMelhorado.Apresentacao
 {
-    partial class GerenciarPosts
+    partial class PostsDoUsuario
     {
         /// <summary>
         /// Required designer variable.
@@ -30,37 +30,51 @@
         {
             this.flowLayoutPanelPosts = new System.Windows.Forms.FlowLayoutPanel();
             this.btnVoltar = new System.Windows.Forms.Button();
+            this.lblUsuario = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // flowLayoutPanelPosts
             // 
             this.flowLayoutPanelPosts.AutoScroll = true;
-            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(41, 31);
+            this.flowLayoutPanelPosts.Location = new System.Drawing.Point(31, 77);
             this.flowLayoutPanelPosts.Name = "flowLayoutPanelPosts";
-            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(598, 320);
+            this.flowLayoutPanelPosts.Size = new System.Drawing.Size(677, 280);
             this.flowLayoutPanelPosts.TabIndex = 0;
             // 
             // btnVoltar
             // 
-            this.btnVoltar.Location = new System.Drawing.Point(550, 376);
+            this.btnVoltar.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVoltar.Location = new System.Drawing.Point(613, 404);
             this.btnVoltar.Name = "btnVoltar";
-            this.btnVoltar.Size = new System.Drawing.Size(89, 35);
-            this.btnVoltar.TabIndex = 1;
-            this.btnVoltar.Text = "VOLTAR";
+            this.btnVoltar.Size = new System.Drawing.Size(95, 34);
+            this.btnVoltar.TabIndex = 2;
+            this.btnVoltar.Text = "Voltar";
             this.btnVoltar.UseVisualStyleBackColor = true;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // GerenciarPosts
+            // lblUsuario
+            // 
+            this.lblUsuario.AutoSize = true;
+            this.lblUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUsuario.Location = new System.Drawing.Point(61, 28);
+            this.lblUsuario.Name = "lblUsuario";
+            this.lblUsuario.Size = new System.Drawing.Size(70, 25);
+            this.lblUsuario.TabIndex = 3;
+            this.lblUsuario.Text = "label1";
+            // 
+            // PostsDoUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblUsuario);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.flowLayoutPanelPosts);
-            this.Name = "GerenciarPosts";
-            this.Text = "GerenciarPosts";
-            this.Load += new System.EventHandler(this.GerenciarPosts_Load);
+            this.Name = "PostsDoUsuario";
+            this.Text = "PostsDoUsuario";
+            this.Load += new System.EventHandler(this.PostsDoUsuario_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -68,5 +82,6 @@
 
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanelPosts;
         private System.Windows.Forms.Button btnVoltar;
+        private System.Windows.Forms.Label lblUsuario;
     }
 }

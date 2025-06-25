@@ -68,9 +68,9 @@ namespace projetoTetMelhorado.Apresentacao
         //fim do picturebox
         private void CarregarFotoPerfil()
         {
-            Conexao con = new Conexao();
+            using (MySqlConnection con = new Conexao().conectar())
             {
-                MySqlCommand cmd = new MySqlCommand("SELECT foto_perfil FROM logins WHERE email = @email", con.conectar());
+                MySqlCommand cmd = new MySqlCommand("SELECT foto_perfil FROM logins WHERE email = @email", con);
                 cmd.Parameters.AddWithValue("@email", SessaoUsuario.EmailLogado);
 
                 var resultado = cmd.ExecuteScalar();
@@ -78,16 +78,18 @@ namespace projetoTetMelhorado.Apresentacao
                 if (resultado != DBNull.Value && resultado != null)
                 {
                     byte[] imagemBytes = (byte[])resultado;
-
                     using (MemoryStream ms = new MemoryStream(imagemBytes))
                     {
                         pictureBoxPerfil.Image = Image.FromStream(ms);
                     }
                 }
-
-                con.desconectar();
+                else
+                {
+                    pictureBoxPerfil.Image = Properties.Resources.avatar_padrao; // Imagem padrão do Resources
+                }
             }
         }
+
 
         private void CarregarDadosDoUsuario()
         {

@@ -24,7 +24,6 @@ namespace projetoTetMelhorado.Apresentacao
 
         private void BemVindo_Load(object sender, EventArgs e)
         {
-            CarregarProjetos();
             CarregarImagemUsuario();
 
             // Associa o menu à PictureBox do usuário
@@ -40,40 +39,32 @@ namespace projetoTetMelhorado.Apresentacao
 
             foreach (Control ctrl in flowLayoutPanelProjetos.Controls)
             {
-                if (ctrl is Panel panel && panel.Controls.Count > 0)
+                if (ctrl is Panel panel)
                 {
-                    Label lblNome = panel.Controls[0] as Label;
+                    // Procura o Label com o nome do usuário dentro do painel
+                    Label lblNome = panel.Controls
+                        .OfType<Label>()
+                        .FirstOrDefault(lbl => lbl.Font.Bold); // Assume que o nome tem fonte em negrito
+
                     if (lblNome != null)
                     {
-                        string nomeProjeto = lblNome.Text.ToLower();
-                        panel.Visible = nomeProjeto.Contains(termo);
+                        string nomeUsuario = lblNome.Text.Trim().ToLower();
+                        panel.Visible = nomeUsuario.Contains(termo);
                     }
                 }
             }
         }
 
+
         private void btnNovoProjeto_Click(object sender, EventArgs e)
         {
             NovoProjeto npj = new NovoProjeto();
-            npj.FormClosed += (s, args) => CarregarProjetos(); // recarrega ao fechar
+            /*npj.FormClosed += (s, args) => CarregarProjetos(); // recarrega ao fechar*/
             npj.ShowDialog(); // aguarda fechamento
         }
 
-        // Filtro do ComboBox: Mais recentes ou mais antigos
-        private void cbFiltro_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (cbFiltro.SelectedItem.ToString() == "Mais recentes")
-            {
-                CarregarProjetos("DESC");
-            }
-            else if (cbFiltro.SelectedItem.ToString() == "Mais antigos")
-            {
-                CarregarProjetos("ASC");
-            }
-        }
-
-        // Método principal para carregar os projetos
-        private void CarregarProjetos(string ordem = "DESC")
+        // Método principal para carregar os ususarios
+        private void CarregarUsuarios()
         {
             flowLayoutPanelProjetos.Controls.Clear();
 
@@ -81,37 +72,86 @@ namespace projetoTetMelhorado.Apresentacao
             {
                 using (MySqlConnection con = new Conexao().conectar())
                 {
-                    string query = $@"
-            SELECT p.nome_projeto, p.descricao, p.valor, p.data_criacao, p.qtd_pessoas,
-                   u.nome AS nome_autor, u.foto_perfil, u.email AS email_autor, u.telefone
-            FROM projetos p
-            INNER JOIN logins u ON p.email_autor = u.email
-            ORDER BY p.data_criacao {ordem}";
-
+                    string query = "SELECT nome, email, telefone, foto_perfil FROM logins";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
                     while (reader.Read())
                     {
-                        string nome = reader["nome_projeto"].ToString();
-                        string descricao = reader["descricao"].ToString();
-                        decimal valor = Convert.ToDecimal(reader["valor"]);
-                        DateTime data = Convert.ToDateTime(reader["data_criacao"]);
-                        int qtdPessoas = Convert.ToInt32(reader["qtd_pessoas"]);
-                        string nomeAutor = reader["nome_autor"].ToString();
-                        byte[] fotoAutor = reader["foto_perfil"] != DBNull.Value ? (byte[])reader["foto_perfil"] : null;
-                        string emailAutor = reader["email_autor"].ToString();
-                        string telefoneAutor = reader["telefone"].ToString();
+                        string nome = reader["nome"].ToString();
+                        string email = reader["email"].ToString();
+                        string telefone = reader["telefone"].ToString();
+                        byte[] foto = reader["foto_perfil"] != DBNull.Value ? (byte[])reader["foto_perfil"] : null;
 
-                        AdicionarProjetoAoFeed(nome, descricao, valor, data, nomeAutor, fotoAutor, emailAutor, telefoneAutor, qtdPessoas);
+                        flowLayoutPanelProjetos.Controls.Add(CriarCardUsuario(nome, email, telefone, foto));
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Erro ao carregar projetos: " + ex.Message, "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao carregar usuários: " + ex.Message);
             }
         }
+
+        private Panel CriarCardUsuario(string nome, string email, string telefone, byte[] foto)
+        {
+            Panel card = new Panel();
+            card.Size = new Size(flowLayoutPanelProjetos.Width - 30, 100);
+            card.BorderStyle = BorderStyle.FixedSingle;
+            card.Margin = new Padding(10);
+
+            PictureBox pic = new PictureBox();
+            pic.Size = new Size(60, 60);
+            pic.Location = new Point(10, 10);
+            pic.SizeMode = PictureBoxSizeMode.Zoom;
+
+            if (foto != null)
+            {
+                pic.Image = Image.FromStream(new MemoryStream(foto));
+            }
+            else
+            {
+                pic.Image = Properties.Resources.avatar_padrao; // Imagem padrão do Resources
+            }
+
+            Label lblNome = new Label();
+            lblNome.Text = nome;
+            lblNome.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+            lblNome.Location = new Point(80, 10);
+            lblNome.AutoSize = true;
+
+            Label lblEmail = new Label();
+            lblEmail.Text = "Email: " + email;
+            lblEmail.Location = new Point(80, 35);
+            lblEmail.AutoSize = true;
+
+            Label lblTel = new Label();
+            lblTel.Text = "Tel: " + telefone;
+            lblTel.Location = new Point(80, 55);
+            lblTel.AutoSize = true;
+
+            Button btnVerPosts = new Button();
+            btnVerPosts.Text = "Ver Posts";
+            btnVerPosts.Size = new Size(90, 30);
+            btnVerPosts.Location = new Point(card.Width - 110, 30);
+            btnVerPosts.Click += (s, e) =>
+            {
+                PostsDoUsuario tela = new PostsDoUsuario(email);
+                tela.ShowDialog();
+            };
+
+            card.Controls.Add(pic);
+            card.Controls.Add(lblNome);
+            card.Controls.Add(lblEmail);
+            card.Controls.Add(lblTel);
+            card.Controls.Add(btnVerPosts);
+
+            return card;
+        }
+
+
+
+
 
 
 
@@ -220,13 +260,9 @@ namespace projetoTetMelhorado.Apresentacao
 
         private void BemVindo_Load_1(object sender, EventArgs e)
         {
-            CarregarProjetos();
+            CarregarUsuarios(); // Em vez de projetos
             CarregarImagemUsuario();
-
-            // Associa o menu à PictureBox do usuário
             pictureBoxUsuario.ContextMenuStrip = contextMenuUsuario;
-
-            // Garante que clique esquerdo também abra o menu
             pictureBoxUsuario.MouseClick += pictureBoxUsuario_MouseClick;
 
         }
@@ -236,7 +272,7 @@ namespace projetoTetMelhorado.Apresentacao
             {
                 using (MySqlConnection con = new Conexao().conectar())
                 {
-                    string query = "SELECT foto_perfil FROM logins WHERE email = @Email"; // CORRIGIDO AQUI
+                    string query = "SELECT foto_perfil FROM logins WHERE email = @Email";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     cmd.Parameters.AddWithValue("@Email", SessaoUsuario.EmailLogado);
 
@@ -251,24 +287,17 @@ namespace projetoTetMelhorado.Apresentacao
                     }
                     else
                     {
-                        pictureBoxUsuario.Image = null; // sem imagem
+                        // Exibe imagem padrão
+                        pictureBoxUsuario.Image = Properties.Resources.avatar_padrao;
                     }
                 }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Erro ao carregar imagem do usuário: " + ex.Message);
+                pictureBoxUsuario.Image = Properties.Resources.avatar_padrao; // fallback também em erro
             }
         }
-
-
-        private void btnGerenciarPosts_Click(object sender, EventArgs e)
-        {
-            GerenciarPosts posts = new GerenciarPosts();
-            posts.Show();
-            this.Close(); // ou .Hide() se quiser manter aberto
-        }
-        //fim do botão gerenciar posts
 
         private void pictureBoxUsuario_MouseClick(object sender, MouseEventArgs e)
         {
@@ -284,12 +313,6 @@ namespace projetoTetMelhorado.Apresentacao
             this.Close();
         }
 
-        private void novoProjetoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            new GerenciarPosts().Show();
-            this.Close();
-        }
-
         private void sairDToolStripMenuItem_Click(object sender, EventArgs e)
         {
             SessaoUsuario.EmailLogado = null; // Limpa a sessão do usuário
@@ -299,5 +322,6 @@ namespace projetoTetMelhorado.Apresentacao
 
             this.Close();
         }
+
     }
 }
