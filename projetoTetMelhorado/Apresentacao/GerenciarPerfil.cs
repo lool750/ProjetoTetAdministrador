@@ -54,12 +54,14 @@ namespace projetoTetMelhorado.Apresentacao
                 byte[] novaImagem = File.ReadAllBytes(ofd.FileName);
 
                 LoginDaoComandos dao = new LoginDaoComandos();
-                dao.AtualizarFotoPerfil(SessaoUsuario.EmailLogado, novaImagem);
+                string resultado = dao.AtualizarFotoPerfil(SessaoUsuario.EmailLogado, novaImagem);
 
-                // Atualiza a imagem no PictureBox
-                pictureBoxPerfil.Image = Image.FromFile(ofd.FileName);
+                MessageBox.Show(resultado); // Mostra se foi atualizado com sucesso ou não
+
+                CarregarFotoPerfil(); // Recarrega a imagem direto do banco para confirmar que salvou
             }
         }
+
         //Fim do botão mudar imagem de perfil
         private void pictureBoxPerfil_Click(object sender, EventArgs e)
         {
