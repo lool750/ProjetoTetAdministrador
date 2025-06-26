@@ -91,6 +91,7 @@
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(249, 31);
             this.txtValor.TabIndex = 5;
+            this.txtValor.TextChanged += new System.EventHandler(this.txtValor_TextChanged);
             // 
             // btnSalvar
             // 

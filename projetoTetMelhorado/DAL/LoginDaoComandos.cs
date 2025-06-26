@@ -62,7 +62,7 @@ namespace projetoTetMelhorado.DAL
             }
         }
 
-        public string cadastrar(string nome, string email, string senha, string confSenha, string telefone)
+        public string cadastrar(string nome, string email, string senha, string confSenha, string telefone, string tipo)
         {
             if (senha != confSenha)
             {
@@ -86,12 +86,13 @@ namespace projetoTetMelhorado.DAL
                     }
 
                     // Cadastrar
-                    string insertQuery = "INSERT INTO logins (nome, email, senha, telefone) VALUES (@nome, @email, @senha, @telefone)";
+                    string insertQuery = "INSERT INTO logins (nome, email, senha, telefone, tipo) VALUES (@nome, @email, @senha, @telefone, @tipo)";
                     MySqlCommand insertCmd = new MySqlCommand(insertQuery, con);
                     insertCmd.Parameters.AddWithValue("@nome", nome);
                     insertCmd.Parameters.AddWithValue("@email", email);
                     insertCmd.Parameters.AddWithValue("@senha", senha);
                     insertCmd.Parameters.AddWithValue("@telefone", telefone);
+                    insertCmd.Parameters.AddWithValue("@tipo", tipo);
                     insertCmd.ExecuteNonQuery();
 
                     tem = true;
@@ -103,6 +104,7 @@ namespace projetoTetMelhorado.DAL
                 }
             }
         }
+
 
     }
 }

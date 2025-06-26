@@ -22,11 +22,15 @@ namespace projetoTetMelhorado.Modelo
         public string cadastrar(string nome, string email, string senha, string confSenha, string telefone)
         {
             LoginDaoComandos loginDao = new LoginDaoComandos();
-            this.mensagem = loginDao.cadastrar(nome, email, senha, confSenha, telefone);
+
+            // Adiciona o tipo 'admin' como fixo
+            this.mensagem = loginDao.cadastrar(nome, email, senha, confSenha, telefone, "admin");
+
             if (loginDao.tem)
             {
                 this.tem = true;
             }
+
             return mensagem;
         }
 

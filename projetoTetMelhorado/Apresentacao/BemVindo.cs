@@ -111,7 +111,7 @@ namespace projetoTetMelhorado.Apresentacao
             }
             else
             {
-                pic.Image = Properties.Resources.avatar_padrao; // Imagem padrão do Resources
+                pic.Image = Properties.Resources.avatar_padrao;
             }
 
             Label lblNome = new Label();
@@ -130,14 +130,32 @@ namespace projetoTetMelhorado.Apresentacao
             lblTel.Location = new Point(80, 55);
             lblTel.AutoSize = true;
 
+            // Botão "Ver Posts"
             Button btnVerPosts = new Button();
             btnVerPosts.Text = "Ver Posts";
             btnVerPosts.Size = new Size(90, 30);
-            btnVerPosts.Location = new Point(card.Width - 110, 30);
+            btnVerPosts.Location = new Point(card.Width - 210, 30);
             btnVerPosts.Click += (s, e) =>
             {
                 PostsDoUsuario tela = new PostsDoUsuario(email);
                 tela.ShowDialog();
+            };
+
+            // Botão "Excluir"
+            Button btnExcluir = new Button();
+            btnExcluir.Text = "Excluir";
+            btnExcluir.Size = new Size(90, 30);
+            btnExcluir.Location = new Point(card.Width - 110, 30);
+            btnExcluir.BackColor = Color.Red;
+            btnExcluir.ForeColor = Color.White;
+            btnExcluir.Click += (s, e) =>
+            {
+                if (MessageBox.Show("Tem certeza que deseja excluir este usuário?", "Confirmação",
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    ExcluirUsuario(email);
+                    CarregarUsuarios(); // Recarrega a lista após exclusão
+                }
             };
 
             card.Controls.Add(pic);
@@ -145,9 +163,38 @@ namespace projetoTetMelhorado.Apresentacao
             card.Controls.Add(lblEmail);
             card.Controls.Add(lblTel);
             card.Controls.Add(btnVerPosts);
+            card.Controls.Add(btnExcluir);
 
             return card;
         }
+
+        private void ExcluirUsuario(string email)
+        {
+            try
+            {
+                using (MySqlConnection con = new Conexao().conectar())
+                {
+                    string query = "DELETE FROM logins WHERE email = @Email";
+                    MySqlCommand cmd = new MySqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    if (rowsAffected > 0)
+                    {
+                        MessageBox.Show("Usuário excluído com sucesso!");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Usuário não encontrado ou erro ao excluir.");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro ao excluir usuário: " + ex.Message);
+            }
+        }
+
 
 
 

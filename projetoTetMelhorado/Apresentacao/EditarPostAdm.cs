@@ -85,5 +85,30 @@ namespace projetoTetMelhorado.Apresentacao
             this.Close();
         }
         //fim do botão cancelar
+        private void txtValor_TextChanged(object sender, EventArgs e)
+        {
+            string texto = txtValor.Text;
+
+            // Remove tudo que não for número ou vírgula
+            string apenasNumerosEVirgula = new string(texto.Where(c => char.IsDigit(c) || c == ',').ToArray());
+
+            // Garante que só tenha uma vírgula
+            int primeiraVirgula = apenasNumerosEVirgula.IndexOf(',');
+            if (primeiraVirgula >= 0)
+            {
+                // Remove vírgulas extras
+                apenasNumerosEVirgula = apenasNumerosEVirgula.Substring(0, primeiraVirgula + 1) +
+                    apenasNumerosEVirgula.Substring(primeiraVirgula + 1).Replace(",", "");
+            }
+
+            // Atualiza o TextBox apenas se foi alterado
+            if (txtValor.Text != apenasNumerosEVirgula)
+            {
+                int pos = txtValor.SelectionStart;
+                txtValor.Text = apenasNumerosEVirgula;
+                txtValor.SelectionStart = Math.Min(pos, txtValor.Text.Length);
+            }
+        }
+
     }
 }
