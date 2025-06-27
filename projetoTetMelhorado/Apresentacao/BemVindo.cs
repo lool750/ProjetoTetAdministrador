@@ -64,6 +64,7 @@ namespace projetoTetMelhorado.Apresentacao
         }
 
         // Método principal para carregar os ususarios
+        // Método principal para carregar os usuários
         private void CarregarUsuarios()
         {
             flowLayoutPanelProjetos.Controls.Clear();
@@ -72,7 +73,7 @@ namespace projetoTetMelhorado.Apresentacao
             {
                 using (MySqlConnection con = new Conexao().conectar())
                 {
-                    string query = "SELECT nome, email, telefone, foto_perfil FROM logins";
+                    string query = "SELECT nome, email, telefone, foto_perfil, tipo FROM logins";
                     MySqlCommand cmd = new MySqlCommand(query, con);
                     MySqlDataReader reader = cmd.ExecuteReader();
 
@@ -81,9 +82,10 @@ namespace projetoTetMelhorado.Apresentacao
                         string nome = reader["nome"].ToString();
                         string email = reader["email"].ToString();
                         string telefone = reader["telefone"].ToString();
+                        string tipo = reader["tipo"].ToString();
                         byte[] foto = reader["foto_perfil"] != DBNull.Value ? (byte[])reader["foto_perfil"] : null;
 
-                        flowLayoutPanelProjetos.Controls.Add(CriarCardUsuario(nome, email, telefone, foto));
+                        flowLayoutPanelProjetos.Controls.Add(CriarCardUsuario(nome, email, telefone, foto, tipo));
                     }
                 }
             }
@@ -93,7 +95,8 @@ namespace projetoTetMelhorado.Apresentacao
             }
         }
 
-        private Panel CriarCardUsuario(string nome, string email, string telefone, byte[] foto)
+        // Cria o card de cada usuário
+        private Panel CriarCardUsuario(string nome, string email, string telefone, byte[] foto, string tipo)
         {
             Panel card = new Panel();
             card.Size = new Size(flowLayoutPanelProjetos.Width - 30, 100);
@@ -115,7 +118,7 @@ namespace projetoTetMelhorado.Apresentacao
             }
 
             Label lblNome = new Label();
-            lblNome.Text = nome;
+            lblNome.Text = tipo == "admin" ? $"{nome} (ADM)" : nome;
             lblNome.Font = new Font("Segoe UI", 10, FontStyle.Bold);
             lblNome.Location = new Point(80, 10);
             lblNome.AutoSize = true;
@@ -167,6 +170,7 @@ namespace projetoTetMelhorado.Apresentacao
 
             return card;
         }
+
 
         private void ExcluirUsuario(string email)
         {
